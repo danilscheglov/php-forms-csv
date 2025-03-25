@@ -32,6 +32,7 @@
                 <input type="text" class="form-control" id="color" name="color" required>
             </div>
             <button type="submit" class="btn btn-primary">Сохранить</button>
+            <a href="index.php" class="btn btn-secondary mt-2">Назад</a>
         </form>
     </div>
 </body>
