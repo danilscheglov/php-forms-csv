@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -39,19 +39,17 @@
                     echo '<tbody>';
 
                     $isHeader = true;
-                    while (($row = fgetcsv($file, 1000, ',')) !== false) {
+                    while (($row = fgetcsv($file, null, ',')) !== false) {
                         if ($isHeader) {
                             $isHeader = false;
                             continue;
                         }
 
-                        $safeRow = array_map('htmlspecialchars', $row);
-
                         echo '<tr>';
-                        echo '<td>' . $safeRow[0] . '</td>';
-                        echo '<td>' . $safeRow[1] . '</td>';
-                        echo '<td>' . $safeRow[2] . '</td>';
-                        echo '<td>' . $safeRow[3] . '</td>';
+                        echo '<td>' . $row[0] . '</td>';
+                        echo '<td>' . $row[1] . '</td>';
+                        echo '<td>' . $row[2] . '</td>';
+                        echo '<td>' . $row[3] . '</td>';
                         echo '</tr>';
                     }
 
