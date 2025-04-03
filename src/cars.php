@@ -47,10 +47,9 @@
 
                         $safeRow = array_map('htmlspecialchars', $row);
                         echo '<tr>';
-                        echo '<td>' . $safeRow[0] . '</td>';
-                        echo '<td>' . $safeRow[1] . '</td>';
-                        echo '<td>' . $safeRow[2] . '</td>';
-                        echo '<td>' . $safeRow[3] . '</td>';
+                        foreach ($safeRow as $cell) {
+                            echo '<td>' . $cell . '</td>';
+                        }
                         echo '</tr>';
                     }
 
